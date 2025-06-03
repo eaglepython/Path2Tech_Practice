@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation and Data Presentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #555;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #777;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .content-section {
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .featured-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            color: #333;
+            border-bottom: 2px solid #555;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Development Lab: Navigation and Data Presentation</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#data">Data Table</a></li>
+            <li><a href="#gallery">Image Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home" class="content-section">
+            <h2 class="section-title">Welcome to Our Data Portal</h2>
+            <p>This webpage demonstrates the use of HTML navigation elements and data presentation techniques. 
+               Navigate through the sections using the menu above to explore different content areas.</p>
+            <p>The navigation bar uses the <code>&lt;nav&gt;</code> and <code>&lt;a&gt;</code> tags to create 
+               functional links, while the data section showcases organized information using proper table structure.</p>
+        </section>
+        
+        <section id="data" class="content-section">
+            <h2 class="section-title">Student Performance Data</h2>
+            <p>The following table displays organized data with appropriate headers and rows:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Grade</th>
+                        <th>Semester</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>STU001</td>
+                        <td>Alice Johnson</td>
+                        <td>Web Development</td>
+                        <td>A</td>
+                        <td>Fall 2024</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>STU002</td>
+                        <td>Bob Smith</td>
+                        <td>Database Design</td>
+                        <td>B+</td>
+                        <td>Fall 2024</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>STU003</td>
+                        <td>Carol Davis</td>
+                        <td>JavaScript Programming</td>
+                        <td>A-</td>
+                        <td>Spring 2025</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>STU004</td>
+                        <td>David Wilson</td>
+                        <td>UI/UX Design</td>
+                        <td>B</td>
+                        <td>Fall 2024</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>STU005</td>
+                        <td>Eva Martinez</td>
+                        <td>Mobile Development</td>
+                        <td>A</td>
+                        <td>Spring 2025</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>STU006</td>
+                        <td>Frank Brown</td>
+                        <td>Cybersecurity</td>
+                        <td>B+</td>
+                        <td>Fall 2024</td>
+                        <td>Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="gallery" class="content-section">
+            <h2 class="section-title">Featured Image</h2>
+            <p>This section demonstrates the use of the <code>&lt;img&gt;</code> tag for displaying images:</p>
+            
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                     alt="Modern computer setup with code on screen" 
+                     class="featured-image">
+                <p><em>A modern development workspace showcasing web development tools and code</em></p>
+            </div>
+        </section>
+        
+        <section id="about" class="content-section">
+            <h2 class="section-title">About This Project</h2>
+            <p>This webpage was created as part of a web development lab assignment focusing on:</p>
+            <ul>
+                <li>Creating functional navigation using HTML <code>&lt;nav&gt;</code> and <code>&lt;a&gt;</code> tags</li>
+                <li>Displaying organized data in tables with proper headers and rows</li>
+                <li>Implementing responsive image display using the <code>&lt;img&gt;</code> tag</li>
+                <li>Applying CSS styling for improved visual presentation</li>
+            </ul>
+        </section>
+        
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact Information</h2>
+            <p>For questions about this lab assignment or web development topics:</p>
+            <ul>
+                <li>Email: webdev.lab@example.com</li>
+                <li>Office Hours: Monday-Friday, 9:00 AM - 5:00 PM</li>
+                <li>Location: Computer Science Building, Room 201</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Web Development Lab Assignment. Created for educational purposes.</p>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add active state to navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.style.backgroundColor = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.backgroundColor = '#777';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
