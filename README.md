@@ -26,5 +26,7 @@ http://127.0.0.1:5500/page_presentation.html
 
 
 ├── page_presentation.html
+
 ├── style.css (if applicable)
+
 └── README.md
